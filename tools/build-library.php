@@ -74,6 +74,7 @@ $files = [
     'core/FastCGI/HttpResponse.php',
     'core/Coroutine/FastCGI/Client.php',
     'core/Coroutine/FastCGI/Client/Exception.php',
+    'core/Coroutine/FastCGI/Proxy.php',
     # <ext> #
     'ext/curl.php',
     # <finalizer> #
