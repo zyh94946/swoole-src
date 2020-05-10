@@ -108,6 +108,10 @@ static int trace_get_strz(pid_t traced_pid, char *buf, size_t sz, long addr)
     long l = addr;
     char *lc = (char *) &l;
 
+    if (0 > trace_get_long(traced_pid, addr, &l)) {
+        return -1;
+    }
+
     i = l % SIZEOF_LONG;
     l -= i;
     for (addr = l;; addr += SIZEOF_LONG)
